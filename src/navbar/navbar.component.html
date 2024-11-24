@@ -1,0 +1,46 @@
+<nav class="py-10 px-30  fixed left-0 bg-gray-800 right-0 top-0 z-50 shadow-md  ">
+    <div class="max-w-screen-xl mx-auto flex justify-center   ">
+        <div class="relative container mx-auto flex md:justify-between items-center  ">
+            <h1 class="text-nowrap text-3xl text-white font-bold uppercase cursor-pointer sm:pl-8  " routerLink="start framework">
+                Start Framework
+            </h1>
+
+            <ul class=" hidden lg:flex space-x-8 text-lg font-semibold px-16 " #meun>
+                <li class="">
+                    <a #about routerLink="about" routerLinkActive=" bg-teal-500 p-3 rounded-lg"  class="font-semibold text-white text-lg uppercase cursor-pointer">About</a>
+                </li>
+                <li class="">
+                    <a routerLink="portfolio"  routerLinkActive=" bg-teal-500 p-3 rounded-lg" class="font-semibold text-white text-lg uppercase cursor-pointer">portfolio</a>
+                </li>
+                <li class="">
+                    <a routerLink="contact"  routerLinkActive=" bg-teal-500 p-3 rounded-lg" class="font-semibold text-white text-lg uppercase cursor-pointer">Contact</a>
+                </li>
+            </ul>
+
+            <button class="text-2xl sm:px-56 md:px-10 lg:hidden p-2" aria-label="Toggle Menu"  
+            (click)="toggleMenu()" >
+                <i class="fa-solid fa-bars fa-lg text-gray-700 border-4 border-black rounded-lg py-5 px-2 " ></i>
+            </button>
+
+
+             
+
+           
+           
+         
+        <!-- Dropdown Menu -->
+
+        </div>
+        <div class="absolute left-0 top-28  bg-gray-800 w-full">
+            <ul 
+            class="dropmenu space-y-4  text-lg font-semibold  lg:hidden px-20 py-5 "
+            [class.hidden]="!isMenuOpen" 
+           >
+              <li><a  routerLink="about"  routerLinkActive=" bg-teal-500 p-3 rounded-lg" (click)="closeMenu()"  class=" text-white">About</a></li>
+              <li><a routerLink="portfolio"  routerLinkActive=" bg-teal-500 p-3 rounded-lg" (click)="closeMenu()"  class=" text-white">Portfolio</a></li>
+              <li><a routerLink="contact"  routerLinkActive=" bg-teal-500 p-3 rounded-lg" (click)="closeMenu()"  class=" text-white">Contact</a></li>
+          </ul>
+        </div>
+
+    </div>
+   </nav>

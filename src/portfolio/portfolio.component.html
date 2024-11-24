@@ -1,0 +1,54 @@
+<section class="relative">
+    <div class="max-w-screen-xl mx-auto pt-40 sm:max-md:pt-60 min-h-screen flex justify-center  ">
+        <div class="container mx-auto flex justify-center ">
+            <div class="">
+                
+                <h2 class="text-nowrap text-4xl font-bold uppercase text-center text-slate-800">portfolio component</h2>
+                <div class="flex items-center justify-center mt-6 cursor-pointer">
+                    <div class="w-20 h-1 bg-slate-800  "></div>
+                    <div class="mx-4">
+                        <i class="fa-solid fa-star fa-xl text-slate-800"></i>
+                    </div>
+                    <div class="w-20 h-1 bg-slate-800"></div>
+                  </div>
+
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 my-5 p-6 " >
+
+
+                    @for (image of images; track $index) {
+                        <div class="relative overflow-hidden group rounded-lg shadow-md cursor-pointer "  (click)="showModel(image)"  >
+                            <img [src]="image.imgSrc" class=" w-full object-cover"  alt="portfolio img" #imgs> 
+                            <div class="absolute inset-0 bg-teal-500 bg-opacity-80 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                                <div class="text-white text-7xl font-bold">
+                                    <i class="fa-solid fa-plus"></i>
+                                </div>
+        
+                            </div>
+                        </div>
+    
+                    }
+                    
+                  </div>
+
+                  <div #mymodel [class]="isModalOpen ? 'visible' : 'invisible'" class=" pt-48 absolute w-screen inset-0   bg-slate-900 bg-opacity-15 flex justify-center items-center">
+                    <div class="relative cursor-pointer ">
+                        <i class="fa-solid fa-xmark fa-lg text-gray-100 md:absolute md:right-44 md:top-7 sm:absolute  sm:top-8  sm:right-20 " (click)="closeModel()"></i>
+                        <i class="fa-solid fa-arrow-left fa-lg text-gray-100  md:absolute md:top-52 md:left-44 sm:absolute sm:top-52  sm:left-20 "  (click)="previousImage()"></i>
+                        <img [src]="selectedImage" class=" sm:w-5/6  md:w-4/6  block mx-auto  " alt="project image">
+                        <i class="fa-solid fa-arrow-right fa-lg text-gray-100 md:absolute md:top-52 md:right-44 sm:absolute  sm:top-52 sm:right-20" (click)="nextImage()"></i>
+                    </div>
+
+                  </div>
+
+
+                
+            </div>
+
+            
+           
+
+            
+            
+        </div>
+    </div>
+</section>

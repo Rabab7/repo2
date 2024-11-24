@@ -1,0 +1,60 @@
+<section class="">
+    <div class="max-w-screen-xl mx-auto pt-40 sm:max-md:pt-60 min-h-screen flex justify-center ">
+        <div class="container mx-auto ">
+            <div class="">
+                <h2 class="text-nowrap text-4xl font-bold uppercase text-center text-slate-800">contact section</h2>
+                <div class="flex items-center justify-center mt-6">
+                    <div class="w-20 h-1 bg-slate-800  "></div>
+                    <div class="mx-4">
+                        <i class="fa-solid fa-star fa-xl text-slate-800"></i>
+                    </div>
+                    <div class="w-20 h-1 bg-slate-800"></div>
+                  </div>
+
+                  <div class="p-10">
+                    <form class=" sm:px-0  lg:px-52">
+                        <div class="flex flex-col gap-4 ">
+                            <label for="name"  [class]="isNameFocused  ? 'visible' : 'invisible'"  class="text-teal-400 transition-all duration-300  ">UserName :</label>
+                            <input type="text" placeholder="UserName" (keydown)="onFocus('name')"  class=" peer placeholder:text-gray-600 py-3 outline-none border-b-2 border-gray-400 ">
+                            
+                        </div>
+
+
+                        <div class="flex flex-col gap-4 mt-5 ">
+                            <label for="age"  [class]="isAgeFocused ? 'visible' : 'invisible'"  class="text-teal-400 transition-all duration-300 ">UserAge :</label>
+                            <input type="number" placeholder="UserAge" (keydown)="onFocus('age')"  class=" peer placeholder:text-gray-600 py-3 outline-none border-b-2 border-gray-400 ">
+                            
+                        </div>
+
+                        <div class="flex flex-col gap-4 mt-5 ">
+                            <label for="email"  [class]="isEmailFocused ? 'visible': 'invisible'"  class="text-teal-400 transition-all duration-300 ">UserEmail :</label>
+                            <input type="email" placeholder="UserEmail" (keydown)="onFocus('email')"  class="  peer placeholder:text-gray-600 py-3 outline-none border-b-2 border-gray-400 ">
+                            
+                        </div>
+
+                        <div class="flex flex-col gap-4 mt-5 ">
+                            <label for="password" [class]="isPasswordFocused ? 'visible' : 'invisible'"  class="text-teal-400 transition-all duration-300 ">UserPassword :</label>
+                            <input type="password" placeholder="UserPassword" (keydown)="onFocus('password')" class="  peer placeholder:text-gray-600 py-3 outline-none border-b-2 border-gray-400 ">
+                            
+                        </div>
+
+                        <button class="p-2 bg-teal-500 text-white  my-10 rounded-md  capitalize">
+                            send message
+                        </button>
+                    </form>
+
+                    
+
+                  </div>
+               
+                
+              
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
